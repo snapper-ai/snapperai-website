@@ -76,17 +76,6 @@ export default function ElizaTemplatesLanding() {
           </a>
 
           <div className="flex items-center space-x-8">
-            <nav className="hidden md:flex space-x-8">
-              <a href="https://www.snapperai.io" className="text-purple-200 hover:text-white transition-colors">
-                Home
-              </a>
-              <a
-                href="https://www.snapperai.io/character-templates"
-                className="text-purple-200 hover:text-white transition-colors"
-              >
-                Templates
-              </a>
-            </nav>
             <div className="flex items-center space-x-4">
               <a
                 href="https://www.youtube.com/@snapperAI"
@@ -120,7 +109,8 @@ export default function ElizaTemplatesLanding() {
             <span className="text-white"> in 12 Minutes</span>
           </h1>
           <p className="text-xl md:text-2xl text-purple-200 mb-8 max-w-4xl mx-auto">
-            Transform AI agent development from 2+ hours of trial-and-error to 12 minutes
+            Transform AI agent development from 2+ hours of trial-and-error to 12 minutes of proven, professional
+            results
           </p>
 
           <div className="max-w-md mx-auto mb-6">
