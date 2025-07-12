@@ -116,7 +116,7 @@ export default function ElizaTemplatesLanding() {
           <div className="max-w-md mx-auto mb-6">
             {/* Direct ConvertKit Form */}
             <form 
-              action="https://app.convertkit.com/forms/2090eb7684/subscriptions" 
+              action="https://app.kit.com/forms/8284178/subscriptions" 
               method="post"
               className="space-y-4 bg-gradient-to-r from-purple-600/20 to-pink-600/20 p-6 rounded-lg border border-purple-500/30"
             >
@@ -311,7 +311,7 @@ export default function ElizaTemplatesLanding() {
           <div className="max-w-md mx-auto">
             {/* Direct ConvertKit Form */}
             <form 
-              action="https://app.convertkit.com/forms/2090eb7684/subscriptions" 
+              action="https://app.kit.com/forms/8284178/subscriptions" 
               method="post"
               className="space-y-4 bg-gradient-to-r from-purple-600/20 to-pink-600/20 p-6 rounded-lg border border-purple-500/30"
             >
