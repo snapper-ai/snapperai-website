@@ -114,30 +114,33 @@ export default function ElizaTemplatesLanding() {
           </p>
 
           <div className="max-w-md mx-auto mb-6">
-            {/* Enhanced ConvertKit Form Container */}
-            <div 
-              className="formkit-form bg-gradient-to-r from-purple-600/20 to-pink-600/20 p-6 rounded-lg border border-purple-500/30" 
-              data-uid="2090eb7684" 
-              data-format="inline"
-              data-version="5"
+            {/* Direct ConvertKit Form */}
+            <form 
+              action="https://app.convertkit.com/forms/2090eb7684/subscriptions" 
+              method="post"
+              className="space-y-4 bg-gradient-to-r from-purple-600/20 to-pink-600/20 p-6 rounded-lg border border-purple-500/30"
             >
-              {/* Fallback form while ConvertKit loads */}
-              <div className="space-y-4">
-                <input
-                  type="text"
-                  placeholder="Your first name"
-                  className="w-full px-4 py-3 bg-[#1A0F3A] border border-purple-500 rounded-lg text-white placeholder-purple-300 focus:outline-none focus:border-cyan-400"
-                />
-                <input
-                  type="email"
-                  placeholder="your.email@example.com"
-                  className="w-full px-4 py-3 bg-[#1A0F3A] border border-purple-500 rounded-lg text-white placeholder-purple-300 focus:outline-none focus:border-cyan-400"
-                />
-                <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-colors">
-                  Get the Complete System
-                </button>
-              </div>
-            </div>
+              <input
+                name="fields[first_name]"
+                type="text"
+                placeholder="Your first name"
+                required
+                className="w-full px-4 py-3 bg-[#1A0F3A] border border-purple-500 rounded-lg text-white placeholder-purple-300 focus:outline-none focus:border-cyan-400"
+              />
+              <input
+                name="email_address"
+                type="email"
+                placeholder="your.email@example.com"
+                required
+                className="w-full px-4 py-3 bg-[#1A0F3A] border border-purple-500 rounded-lg text-white placeholder-purple-300 focus:outline-none focus:border-cyan-400"
+              />
+              <button 
+                type="submit"
+                className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-colors"
+              >
+                Get the Complete System
+              </button>
+            </form>
 
             <p className="text-sm text-purple-300 text-center mt-4">No spam ever. Unsubscribe anytime.</p>
             <p className="text-cyan-300 font-medium text-center mt-2">
@@ -306,30 +309,33 @@ export default function ElizaTemplatesLanding() {
           </p>
 
           <div className="max-w-md mx-auto">
-            {/* Enhanced ConvertKit Form Container */}
-            <div 
-              className="formkit-form bg-gradient-to-r from-purple-600/20 to-pink-600/20 p-6 rounded-lg border border-purple-500/30" 
-              data-uid="2090eb7684" 
-              data-format="inline"
-              data-version="5"
+            {/* Direct ConvertKit Form */}
+            <form 
+              action="https://app.convertkit.com/forms/2090eb7684/subscriptions" 
+              method="post"
+              className="space-y-4 bg-gradient-to-r from-purple-600/20 to-pink-600/20 p-6 rounded-lg border border-purple-500/30"
             >
-              {/* Fallback form while ConvertKit loads */}
-              <div className="space-y-4">
-                <input
-                  type="text"
-                  placeholder="Your first name"
-                  className="w-full px-4 py-3 bg-[#1A0F3A] border border-purple-500 rounded-lg text-white placeholder-purple-300 focus:outline-none focus:border-cyan-400"
-                />
-                <input
-                  type="email"
-                  placeholder="your.email@example.com"
-                  className="w-full px-4 py-3 bg-[#1A0F3A] border border-purple-500 rounded-lg text-white placeholder-purple-300 focus:outline-none focus:border-cyan-400"
-                />
-                <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-colors">
-                  Get the Complete System
-                </button>
-              </div>
-            </div>
+              <input
+                name="fields[first_name]"
+                type="text"
+                placeholder="Your first name"
+                required
+                className="w-full px-4 py-3 bg-[#1A0F3A] border border-purple-500 rounded-lg text-white placeholder-purple-300 focus:outline-none focus:border-cyan-400"
+              />
+              <input
+                name="email_address"
+                type="email"
+                placeholder="your.email@example.com"
+                required
+                className="w-full px-4 py-3 bg-[#1A0F3A] border border-purple-500 rounded-lg text-white placeholder-purple-300 focus:outline-none focus:border-cyan-400"
+              />
+              <button 
+                type="submit"
+                className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-colors"
+              >
+                Get the Complete System
+              </button>
+            </form>
 
             <div className="mt-6 space-y-2">
               <p className="text-sm text-purple-300 flex items-center justify-center gap-2">
