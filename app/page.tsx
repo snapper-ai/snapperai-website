@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect } from "react"
-import Head from "next/head"
 import { Card, CardContent } from "@/components/ui/card"
 import {
   CheckCircle,
@@ -54,6 +53,43 @@ export default function ElizaTemplatesLanding() {
       document.head.appendChild(script)
     }
 
+    // Update document title and meta tags
+    document.title = "SnapperAI"
+    
+    // Update meta description
+    let metaDescription = document.querySelector('meta[name="description"]')
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Transform AI agent development from 2+ hours to 12 minutes with our complete ElizaOS character creation templates. Get 6 professional templates including guides, prompts, and automation tools.')
+    } else {
+      metaDescription = document.createElement('meta')
+      metaDescription.name = 'description'
+      metaDescription.content = 'Transform AI agent development from 2+ hours to 12 minutes with our complete ElizaOS character creation templates. Get 6 professional templates including guides, prompts, and automation tools.'
+      document.head.appendChild(metaDescription)
+    }
+
+    // Add Open Graph meta tags
+    const ogTags = [
+      { property: 'og:title', content: 'ElizaOS Character Creation System - Create AI Personalities in 12 Minutes' },
+      { property: 'og:description', content: 'Transform AI agent development from 2+ hours to 12 minutes with our complete ElizaOS character creation templates.' },
+      { property: 'og:url', content: 'https://snapperai.io/' },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:site_name', content: 'SnapperAI' },
+      { property: 'twitter:card', content: 'summary_large_image' },
+      { property: 'twitter:creator', content: '@SnapperSol' },
+    ]
+
+    ogTags.forEach(tag => {
+      let existingTag = document.querySelector(`meta[property="${tag.property}"]`)
+      if (existingTag) {
+        existingTag.setAttribute('content', tag.content)
+      } else {
+        const metaTag = document.createElement('meta')
+        metaTag.setAttribute('property', tag.property)
+        metaTag.setAttribute('content', tag.content)
+        document.head.appendChild(metaTag)
+      }
+    })
+
     // Load script with a small delay to ensure DOM is ready
     const timer = setTimeout(loadConvertKitScript, 100)
 
@@ -67,39 +103,7 @@ export default function ElizaTemplatesLanding() {
   }, [])
 
   return (
-    <>
-      <Head>
-        <title>ElizaOS Character Creation System - Create AI Personalities in 12 Minutes | SnapperAI</title>
-        <meta name="description" content="Transform AI agent development from 2+ hours to 12 minutes with our complete ElizaOS character creation templates. Get 6 professional templates including guides, prompts, and automation tools." />
-        
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://snapperai.io/" />
-        <meta property="og:title" content="ElizaOS Character Creation System - Create AI Personalities in 12 Minutes" />
-        <meta property="og:description" content="Transform AI agent development from 2+ hours to 12 minutes with our complete ElizaOS character creation templates." />
-        <meta property="og:image" content="https://snapperai.io/og-image.png" />
-        <meta property="og:site_name" content="SnapperAI" />
-        
-        {/* Twitter */}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://snapperai.io/" />
-        <meta property="twitter:title" content="ElizaOS Character Creation System - Create AI Personalities in 12 Minutes" />
-        <meta property="twitter:description" content="Transform AI agent development from 2+ hours to 12 minutes with our complete ElizaOS character creation templates." />
-        <meta property="twitter:image" content="https://snapperai.io/og-image.png" />
-        <meta property="twitter:creator" content="@SnapperSol" />
-        
-        {/* Additional SEO */}
-        <meta name="keywords" content="ElizaOS, AI agents, character creation, AI personality, TypeScript, Claude, AI development, templates" />
-        <meta name="author" content="SnapperAI" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="canonical" href="https://snapperai.io/" />
-        
-        {/* Favicon */}
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-      </Head>
-      
-      <div className="min-h-screen bg-gradient-to-br from-[#2D1B69] via-[#1A0F3A] to-[#0F0A1F] text-white">
+    <div className="min-h-screen bg-gradient-to-br from-[#2D1B69] via-[#1A0F3A] to-[#0F0A1F] text-white">
       {/* Header */}
       <header className="border-b border-purple-700/30 bg-[#1A0F3A]/95 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
@@ -547,6 +551,5 @@ export default function ElizaTemplatesLanding() {
         </div>
       </footer>
     </div>
-    </>
   )
 }
